@@ -1,0 +1,834 @@
+@use '../base/mixins' as m;
+@use '../base/variables' as v;
+
+.container {
+    @include m.container;
+}
+
+.intro {
+    background-color: #121139;
+
+    &__wrapper {
+        padding: 100px 0;
+    }
+
+    &__inner {
+        @include m.flex-box;
+    }
+
+    &__text {
+        width: 500px;
+    }
+
+    &__title {
+        font-size: v.$third-font-size;
+        font-weight: 800;
+        line-height: 60px;
+        color: v.$first-color;
+    }
+
+    .title__abbr-1 {
+        @include m.gradient-text;
+    }
+
+    &__description {
+        padding: 30px 0;
+        font-weight: 500;
+        font-size: v.$second-font-size;
+        line-height: 30px;
+        color: v.$first-color;
+    }
+
+    .btn {
+        width: 274px;
+        height: 74px;
+        border: 1px solid;
+        margin-top: 20px;
+        transition-duration: .6s;
+        @include m.btn-element;
+        @include m.gradient-border;
+        color: v.$first-color;
+        &:hover {
+            background: #9130F4;
+            background: linear-gradient(135deg, rgba(145, 48, 244, 1) 0%, rgba(70, 70, 249, 1) 100%);
+            box-shadow: 0 1px 60px rgba($color: #9130F4, $alpha: 1.0);
+            transform: translateY(-10px);
+        }
+    }
+
+    &__hero-box {
+        width: 500px;
+        padding-top: 100px;
+    }
+
+    &__hero-box::before {
+        content: "";
+        display: block;
+        width: 440px;
+        height: 280px;
+        z-index: 1;
+        border-radius: 30px;
+        background-image: url(../../assets/img/backgroung/card-bg-1.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+        animation: neons 6s infinite alternate;
+    }
+
+    &__hero-box::after {
+        content: "";
+        display: block;
+        position: relative;
+        width: 210px;
+        height: 270px;
+        z-index: 2;
+        border-radius: 30px;
+        top: -150px;
+        right: -300px;
+        background-image: url(../../assets/img/backgroung/card-bg-2.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+        animation: neons 3s infinite alternate;
+    }
+
+    &__sponsore__block {
+        width: 1000px;
+        @include m.flex-box;
+        margin: 0 auto;
+        gap: 50px;
+    }
+}
+
+.intro::before {
+    content: "";
+    display: block;
+    width: 300px;
+    background-image: url(../../assets/img/backgroung/eclipse-1.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: right;
+}
+
+.consulting {
+    &__inner {
+        padding: 100px 0;
+        @include m.flex-box;
+    }
+
+    &__text {
+        width: 640px;
+        text-align: center;
+        margin: 0 auto
+    }
+
+    &__title {
+        @include m.gradient-text;
+        font-size: v.$fifth-font-size;
+    }
+
+    &__description {
+        width: 400px;
+        padding: 30px 0;
+        margin: 0 auto;
+        font-size: v.$second-font-size;
+        font-weight: 600;
+        color: v.$fourth-color;
+    }
+
+    &__hero {
+        width: 750px;
+        margin: 0 auto;
+        margin-top: -50px;
+        margin-bottom: 80px;
+        min-height: 450px;
+        border-radius: 30px;
+        background-image: url(../../assets/img/details/LineGraph.png);
+        background-repeat: no-repeat;
+        background-size: 750px 450px;
+        background-position: center;
+        animation: neons 2s infinite alternate;
+    }
+}
+
+.production {
+    background-color: #121139;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__inner {
+        padding: 120px 0;
+        @include m.flex-box;
+    }
+
+    &__text {
+        width: 700px;
+        margin: 0 auto;
+        text-align: center
+    }
+
+     &__text-2 {
+        width: 700px;
+        margin-top: 50px;
+        gap: 70px;
+    }
+
+    &__title {
+        padding: 100px 0;
+        @include m.gradient-text;
+        font-size: v.$fifth-font-size;
+        line-height: 60px;
+    }
+
+    &__title-2 {
+        margin: 30px 0;
+        font-size: v.$seventh-font-size;
+        font-weight: bold;
+        color: v.$first-color;    
+    }
+
+    &__description-2 {
+        font-size: v.$first-font-size;
+        font-weight: 500;
+        line-height: 36px;
+        color: v.$first-color;
+    }
+
+
+    .card {
+        width: 360px;
+        height: 519px;
+        padding: 30px 20px;
+        border-radius: 16px;
+        background-color: v.$fourth-color;
+        box-shadow: 0 1px 60px rgba($color: #9130F4, $alpha: 1.0);
+        animation: neons 4s infinite alternate;
+
+        &__text {
+            width: 200px;
+        }
+
+        &__subtitle {
+            font-size: v.$zero-font-size;
+            color: v.$second-color;
+        }
+
+        &__title {
+            font-size: v.$first-font-size;
+            line-height: 40px;
+            color: v.$second-color;
+        }
+
+        &__description {
+            padding: 20px 0;
+            color: v.$fifth-color;
+        }
+
+        &__analitics {
+            display: flex;
+            gap: 30px;
+        }
+
+        .text {
+            padding: 2px 0;
+            font-size: v.$sixth-font-size;
+            color: v.$first-color;
+        }
+
+        .items {
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .eclipse-varriant-1 {
+            width: 15px;
+            height: 15px;
+            border-radius: 40px;
+            @include m.btn-element;
+            background-color: v.$sixth-color;
+        }
+
+        .eclipse-varriant-2 {
+            width: 15px;
+            height: 15px;
+            border-radius: 40px;
+            @include m.btn-element;
+            background-color: v.$seventh-color;
+        }
+
+        .eclipse-varriant-3 {
+            width: 15px;
+            height: 15px;
+            border-radius: 40px;
+            @include m.btn-element;
+            background-color: v.$eighth-color;
+        }
+
+        .eclipse-varriant-4 {
+            width: 15px;
+            height: 15px;
+            border-radius: 40px;
+            @include m.btn-element;
+            background-color: v.$ninth-color;
+        }
+
+        .eclipse-varriant-5 {
+            width: 15px;
+            height: 15px;
+            border-radius: 40px;
+            @include m.btn-element;
+            background-color: v.$sixth-color;
+        }
+    }
+
+    .analysis {
+        padding: 50px 0;
+        @include m.flex-box;
+
+        &__block {
+            flex-direction: column;
+        }
+
+        &__box {
+            width: 172px;
+            height: 162px;
+            border: 1px solid;
+            border-radius: 30px;
+            flex-direction: column;
+            @include m.btn-element;
+            @include m.gradient-border-2;
+        }
+
+        &__subtitle {
+            padding-top: 15px;
+            font-size: v.$first-font-size;
+            font-weight: 400;
+            color: v.$first-color;
+        }
+
+        &__number {
+            width: 50px;
+            margin: 0 auto;
+            margin-top: -50px;
+            z-index: 4;
+            font-size: v.$eighth-font-size;
+            @include m.gradient-text;
+        }
+    }
+}
+
+.case {
+    &__inner {
+        padding: 130px 0;
+        display: flex;
+        align-items: center;
+    }
+
+    &__text {
+        width: 500px;
+        margin: 0 auto;
+        margin-top: 100px;
+        text-align: center;
+    }
+
+    &__title {
+        font-size: v.$fifth-font-size;
+        font-weight: bold;
+        @include m.gradient-text;
+    }
+
+    &__description {
+        padding: 20px 0;
+        font-size: v.$first-font-size;
+        font-weight: 500;
+        color: v.$fourth-color;
+    }
+
+    &__block-1 {
+        width: 757px;
+        height: 917px;
+        padding: 250px 70px;
+        border-radius: 30px;
+        background: #15123E;
+        background: linear-gradient(202deg, rgba(21, 18, 62, 1) 0%, rgba(66, 62, 224, 1) 250%);
+        display: flex;
+        align-items: center;
+    }
+
+    &__block-1::after {
+        content: "";
+        width: 150px;
+        min-height: 120vh;
+        display: block;
+        margin-left: 40px;
+        background-image: url(../../assets/img/logo/Logo-verticale-1.svg);
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: 100% 100%;
+    }
+
+    &__block__text {
+        width: 400px;
+    }
+
+    &__block__title {
+        font-size: v.$seventh-font-size;
+        color: v.$first-color;
+    }
+
+    &__block__description {
+        padding: 20px 0;
+        font-size: v.$first-font-size;
+        line-height: 30px;
+        color: v.$first-color;
+    }
+
+    &__block__btn {
+        width: 411px;
+        height: 72.32px;
+        margin-top: 40px;
+        transition-duration: .3s;
+        @include m.btn-element;
+        @include m.gradient-border;
+        color: v.$first-color;
+        &:hover {
+            background: #9130F4;
+            background: linear-gradient(135deg, rgba(145, 48, 244, 1) 0%, rgba(70, 70, 249, 1) 100%);
+            box-shadow: 0 1px 60px rgba($color: #9130F4, $alpha: 1.0);
+            transform: translateY(-10px);
+        }
+    }
+
+    .mobile__pnone__container {
+        width: 300px;
+        min-height: 70vh;
+        display: block;
+        margin-left: -140px;
+        background-image: url(../../assets/img/details/iPhone\ 13\ Max-\ Midnight\ -\ \ Portrait.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% 100%;
+    }
+}
+
+.coruma {
+    background-color: #121139;
+
+    &__wrapper {
+        padding: 130px 0;
+    }
+    
+    &__inner {
+        
+    }
+
+    &__text {
+        width: 800px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    &__title {
+        font-size: v.$fifth-font-size;
+        font-weight: bold;
+        @include m.gradient-text;
+    }
+
+    &__description {
+        padding: 20px 0;
+        font-size: v.$first-font-size;
+        font-weight: 500;
+        color: v.$first-color;
+    }
+
+    &__intro__block {
+        width: 700px;
+        height: 580px;
+        margin: 0 auto;
+        margin-top: 100px;
+        background-image: url(../../assets/img/details/iMac-27.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% 100%;
+    }
+
+    &__text__block-1 {
+        width: 432.39px;
+        height: 118px;
+        @include m.btn-element;
+        @include m.gradient-border;
+        display: none;
+        
+    }
+
+    &__text__block-2 {
+        width: 432.39px;
+        height: 118px;
+        @include m.btn-element;
+        @include m.gradient-border;
+        display: none;
+    }
+
+    &__text__block-3{
+        width: 432.39px;
+        height: 118px;
+        @include m.btn-element;
+        @include m.gradient-border;
+        display: none;
+    }
+}
+
+@include m.respond-tablet {
+    .container { 
+        max-width: 96%;
+    }
+
+    .intro {
+        &__wrapper { 
+            padding: 150px 0; 
+        }
+
+        &__inner {
+            flex-direction: 
+            column; 
+            gap: 30px; 
+        }
+
+        &__text {
+            width: 100%; 
+            max-width: 550px; 
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        &__title {
+            font-size: 42px; 
+            line-height: 1.2;
+        }
+        
+        &__description {
+            width: 100%; 
+            padding: 20px 0; 
+            font-size: 1rem; 
+        }
+
+        &__hero-box {
+            display: none;
+        }
+
+        &__sponsore__block {
+            width: 100%; 
+            padding-top: 100px;
+            flex-wrap: wrap; 
+            gap: 18px;
+        }
+
+        .btn {
+            width: 250px;
+            margin: 30px auto;
+        }
+    }
+
+    .consulting {
+        &__inner {
+            padding: 70px 0; 
+            flex-direction: 
+            column; gap: 25px;
+        }
+
+        &__text {
+            width: 600px;
+        }
+
+         &__hero {
+            width: 550px;
+        }
+
+        &__hero {
+            min-height: 320px; 
+            background-size: contain;
+        }
+    }
+
+    .production {
+        &__wrapper {
+            flex-direction: column;
+        }
+
+        &__inner {
+            margin-top: -200px;
+            gap: 25px;
+        }
+
+        &__text, &__text-2 {
+            width: 100%;
+        }
+
+        &__text-2 {
+            gap: 40px;
+        }
+
+        &__title {
+            padding: 70px 0; 
+            font-size: 36px; 
+            line-height: 1.2;
+        }
+
+        .card {
+            width: 100%; 
+            margin: 0 auto;
+
+            &__title {
+                font-size: 25px;
+            }
+        }
+
+        .cad__hero {
+            width: 50%;
+            height: 50%;
+        }
+
+        .hero_card_circle {
+            width: 200px;
+        }
+
+        .analysis &__box {
+            width: 100%; 
+            flex-wrap: wrap;
+        }
+    }
+
+    .case {
+        &__inner {
+            padding: 95px 0; 
+            flex-direction: 
+            column; gap: 24px;
+        }
+
+        &__text {
+            width: 100%;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        &__block-1 {
+            width: 100%; 
+            height: auto; 
+            text-align: center;
+            padding: 100px 30px;
+        }
+
+        &__block-1::after {
+            display: none; 
+        }
+
+        &__block__text {
+            width: 100%; 
+        }
+
+        &__block__btn {
+            width: auto;
+        }
+
+        .mobile__pnone__container {
+            display: none;
+        }
+    }
+
+    .coruma {
+        &__wrapper {
+            padding: 80px 0;
+        }
+
+        &__text {
+            width: 100%; 
+            text-align: center;
+            max-width: 720px;
+        }
+
+        &__intro__block {
+            width: 100%; 
+            height: auto; 
+            min-height: 360px; 
+            background-size: contain;
+        }
+
+        &__text__block-1,
+        &__text__block-2,
+        &__text__block-3 {
+            display: none;
+        }
+    }
+}
+
+@include m.respond-phone {
+    .intro {
+        &__wrapper {
+            padding: 90px 0;
+        }
+        
+        &__inner {
+            flex-direction: column; gap: 20px;
+        }
+
+        &__text {
+            width: 100%;
+            padding-top: 100px;
+        }
+
+        &__title {
+            font-size: 32px; line-height: 1.25;
+        }
+
+        &__description {
+            font-size: 0.95rem;
+        }
+
+        &__hero-box {
+            display: none;
+        }
+
+        &__hero-box::before, &__hero-box::after {
+            display: none;
+        }
+
+        &__sponsore__block {
+            flex-wrap: wrap; justify-content: center;
+        }
+    }
+
+    .consulting {
+        &__inner {
+            padding: 60px 0;
+        }
+
+        &__text {
+            width: 100%;
+        }
+
+        &__title {
+            font-size: 34px;
+        }
+
+        &__description {
+            width: 300px;
+            font-size: 14px;
+        }
+
+        &__hero {
+            display: none;
+        }
+    }
+
+    .production {
+        &__inner {
+            padding: 70px 0;
+        }
+
+        &__title {
+            font-size: 30px;
+        }
+
+        .card {
+            width: 100%; 
+            max-width: 100%; 
+            margin: 20px auto;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .hero_card_circle {
+            width: 170px;
+            padding-right: 20px;
+        }
+
+        .card__analitics {
+            flex-wrap: wrap;
+        }
+
+        .analysis {
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 0 auto;
+        }
+    }
+
+    .case {
+        &__inner {
+            padding: 75px 0;
+        }
+
+        &__text {
+            width: 95%;
+        }
+
+        &__block-1 {
+            padding: 60px 20px;
+        }
+    }
+
+    .coruma {
+        &__wrapper {
+            padding: 65px 0;
+        }
+
+        &__text {
+            font-size: 1.05rem;
+        }
+    }
+}
+
+@include m.respond-small-phone {
+    .header__inner {
+        padding: 12px 0; 
+    }
+
+    .header .logo {
+        font-size: 18px; 
+    }
+
+    .intro .title__abbr-1, .intro__title {
+        font-size: 28px;
+    }
+    
+    .consulting__title, .production__title {
+        font-size: 28px;
+    }
+
+    .case__title, .coruma__title {
+        font-size: 26px; 
+    }
+}
+
+@keyframes neons {
+    0% {
+        box-shadow: 0 1px 60px rgba($color: #9130F4, $alpha: 1.0);
+    }
+
+    50% {
+        box-shadow: 0 1px 30px rgba($color: #9130F4, $alpha: 1.0);
+    }
+
+    100% {
+        box-shadow: 0 1px 100px rgba($color: #9130F4, $alpha: 1.0);
+    }
+}
+
+@keyframes neons-lights2 {
+    0% {
+        box-shadow: 0 1px 60px rgba($color: #9130F4, $alpha: 1.0);
+    }
+
+    50% {
+        box-shadow: 0 1px 30px rgba($color: #9130F4, $alpha: 1.0);
+    }
+
+    100% {
+        box-shadow: 0 1px 100px rgba($color: #9130F4, $alpha: 1.0);
+    }
+}

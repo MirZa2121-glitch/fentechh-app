@@ -1,0 +1,54 @@
+@mixin container {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+@mixin flex-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin btn-element {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin gradient-text ($angle: 1330deg, $start: #9130F4, $end: #4646F9) {
+  background: linear-gradient($angle, $start, $end);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+@mixin gradient-border ($width: 5px, $angle: 90deg, $start: #812DE2, $end: #3A49F9) {
+  border: $width solid transparent;
+  border-image: linear-gradient($angle, $start, $end) 1;
+}
+
+@mixin gradient-border-2 ($width: 3px, $angle: 90deg, $start: #812DE2, $end: #3A49F9) {
+  border: $width solid transparent;
+  border-image: linear-gradient($angle, $start, $end) 50;
+}
+
+/* Responsive breakpoints */
+@mixin respond-tablet {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin respond-phone {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin respond-small-phone {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
